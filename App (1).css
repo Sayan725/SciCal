@@ -1,0 +1,133 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.calculator-container {
+  background-color: steelblue;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.calculator-display {
+  width: 92%;
+  padding: 10px;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.button-grid button {
+  padding: 15px;
+  font-size: 2.0em;
+  border: none;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-grid button:hover {
+  background-color: lightcoral;
+}
+
+.scientific-functions {
+  margin-top: 20px;
+}
+
+.scientific-functions button {
+  padding: 10px;
+  font-size: 1em;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e0e0e0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.scientific-functions button:hover {
+  background-color: lightcoral;
+}
+
+.past-calculations {
+  margin-top: 20px;
+  max-height: 150px;
+  overflow-y: auto;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.past-calculations li {
+  list-style: none;
+  padding: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.past-calculations li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .calculator-container {
+    padding: 15px;
+    max-width: 300px;
+  }
+
+  .button-grid button {
+    padding: 12px;
+    font-size: 1em;
+  }
+
+  .scientific-functions button {
+    padding: 8px;
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 768px) {
+  .calculator-container {
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  .calculator-display {
+    font-size: 1.2em;
+  }
+
+  .button-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .button-grid button {
+    padding: 10px;
+    font-size: 0.9em;
+  }
+
+  .scientific-functions button {
+    padding: 5px;
+    font-size: 0.8em;
+  }
+
+  .past-calculations {
+    max-height: 100px;
+  }
+}
